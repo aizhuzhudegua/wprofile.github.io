@@ -125,4 +125,4 @@ defineExpose({ loadSceneFromJson });
 
 实现了基于vuex的组件间双向数据绑定
 
-实现了父组件调用子组件的函数
+实现了父组件调用子组件的函数"git subtree push --prefix dist origin release" 
