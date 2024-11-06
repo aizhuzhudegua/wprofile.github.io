@@ -8,7 +8,7 @@
     "build": "vite build",
     "git-commit-code": "git add . && git commit -m 'update'",
     "git-push-code": "git push origin main && git checkout main",
-    "deploy": "git checkout release && npm run build  && git add -f dist && git commit -m 'update' && git subtree push --prefix dist origin release && git checkout main",
+    "deploy": "npm run build  && git checkout release && git add -f dist && git commit -m 'update' && git subtree push --prefix dist origin release && git checkout main",
     "upload": "npm run git-commit-code && npm run git-push-code",
     "preview": "vite preview"
   },
