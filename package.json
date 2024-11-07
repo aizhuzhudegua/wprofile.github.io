@@ -6,10 +6,6 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "git-commit-code": "git add . && git commit -m 'update'",
-    "git-push-code": "git push origin main && git checkout main",
-    "deploy": "git checkout release && git rebase main && npm run build  && git add -f dist && git commit -m 'update' && git subtree push --prefix --force dist origin release && git checkout main",
-    "upload": "npm run git-commit-code && npm run git-push-code",
     "preview": "vite preview"
   },
   "dependencies": {
