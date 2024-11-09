@@ -4,6 +4,7 @@ import Notes from '../pages/Notes.vue'; // 个人笔记组件
 import SceneEditor from '../pages/SceneEditor.vue'; // 场景编辑器组件
 import Profile from '../pages/Profile.vue'; // 个人简历组件
 
+const history = createWebHistory('/Wprofile/');
 const routes = [
   {
     path: '/',
@@ -28,7 +29,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
+  history,
   routes,
 });
 

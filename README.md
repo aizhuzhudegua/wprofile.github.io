@@ -119,7 +119,11 @@ const loadSceneFromJson = (jsonString) => {
 defineExpose({ loadSceneFromJson });
 ```
 
+## 2024.11.9
 
+暂存gitapi token在浏览器
+
+![image-20241109130033070](images/image-20241109130033070.png)
 
 ### 总结
 

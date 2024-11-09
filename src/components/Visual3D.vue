@@ -13,7 +13,7 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GUI } from "three/examples/jsm/libs/lil-gui.module.min.js";
 import Type3D from '../utils/type'
 import Time from '../utils/Time'
-
+const basePath = import.meta.env.MODE === 'production' ? '/Wprofile/' : '/';
 const store = useStore();
 const isToggleAxes = computed({
     get: () => store.state.visual3D.isToggleAxes,
@@ -82,7 +82,7 @@ const createDirectionLight = () => {
     scene.add(directionalLight);
 
     // 创建太阳图标
-    const sunTexture = new THREE.TextureLoader().load('/sun.png'); // 加载太阳图标的纹理
+    const sunTexture = new THREE.TextureLoader().load(basePath + 'sun.png'); // 加载太阳图标的纹理
     const sunMaterial = new THREE.SpriteMaterial({ map: sunTexture }); // 使用加载的纹理创建材质
     const sunSprite = new THREE.Sprite(sunMaterial); // 创建精灵对象
     sunSprite.scale.set(2, 2, 1); // 调整精灵的大小

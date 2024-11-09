@@ -1,10 +1,11 @@
 import axios from 'axios';
 
 const axiosInstance = axios.create({
-    baseURL: '/api', // 设置你的 API 基础 URL
+    baseURL: import.meta.env.MODE === 'development' ? '/api' : 'https://api.github.com', // 只有在开发环境中使用 /api
     timeout: 10000, // 请求超时时间
     headers: {
         'Content-Type': 'application/json',
+        'Authorization': localStorage.getItem('gitApi')
     },
 });
 
